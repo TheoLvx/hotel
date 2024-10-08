@@ -74,7 +74,11 @@ if( isset($_GET['action']) ){
                 echo "ID de la chambre non spécifié.";
             }
             break;
-        }
+
+        case "reservation":
+            $reservations = getAll("reservation");
+            include "vue/listeReserv.php";
+            break;}
     }
     
     include "vue/footer.php";
